@@ -25,6 +25,7 @@ body{
 
 #piano {
     background-color: #F1D302;
+    z-index: 1;
 }
 
 #piano>.container>.piano{
@@ -76,11 +77,40 @@ body{
     background-color: #1f223278;
 }
 
-.face{
-    height: 100px;
-    width: 100px;
-    background-color: white;
-    border-radius: 50%;
+.gig>.container>.frame{
+    display: flex;
+    flex-wrap: wrap;
+    height: 410px; /* 41*10 */
+    width: 290px; /* 29*10 */
+    background-color: transparent;
+}
+
+.gig>.container>.sunglasses{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40px; /* 4*10 */
+    width: 190px; /* 19*10 */
+    position: absolute;
+    left: 72%;
+    top: 32%;
+    z-index: 0;
+    cursor: grab;
+}
+
+.gig>.container>.smile{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50px; /* 5*10 */
+    width: 60px; /* 6*10 */
+    position: absolute;
+    left: 50%;
+    top: 41%;
+    
+}
+
+.frame>.pixel,.sunglasses>.pixel,.smile>.pixel{
+    height:10px;
+    width: 10px;
 }
 
 @media only screen and (min-width: 425px) {
