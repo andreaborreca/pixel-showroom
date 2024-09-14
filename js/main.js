@@ -35,6 +35,22 @@ function elementsOverlap(el1, el2) {
     );
 }
 
+document.querySelectorAll('.expandDiv').forEach(button => {
+    button.addEventListener('click', function () {
+        const parentElement = this.parentElement;
+        const isExpanded = parentElement.classList.toggle('expanded');
+
+        // Gestisci gli altri div
+        document.querySelectorAll('.gig').forEach(div => {
+            if (div !== parentElement) {
+                div.classList.toggle('collapsed', isExpanded);
+            }
+        });
+
+        document.documentElement.style.overflow = isExpanded ? 'hidden' : 'auto';
+    });
+});
+
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
