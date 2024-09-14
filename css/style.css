@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-wrap: wrap;
@@ -31,34 +36,6 @@ body {
 
 #gioconda {
     transition: min-height 0.5s ease-in, scale 1s ease-in-out;
-}
-
-.expanded {
-    min-height: 100vh;
-    max-width: 100vw;
-    z-index: 9999;
-    scale: 1.4;
-}
-
-.expandDiv {
-    transition: top 1s ease-in-out, left 1s ease-in-out;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    transform: translate(-50%, 0);
-    z-index: 9999;
-}
-
-.expanded>.expandDiv {
-    position: absolute;
-    top: 15%;
-    left: 16.5%;
-    z-index: 9999;
-}
-
-.collapsed {
-    min-height: 0;
-    overflow: hidden;
 }
 
 #piano>.container>.piano {
@@ -169,11 +146,11 @@ body {
 }
 
 #piano>.container>.piano>.key:hover {
-    background-color: #e4da9d;
+    background-color: #F1D302;
 }
 
 #piano>.container>.piano>.dkey:hover {
-    background-color: #e4da9d;
+    background-color: #F1D302;
 }
 
 .gig>.container>.frame {
@@ -241,6 +218,34 @@ body {
 
     .full {
         width: 100%;
+    }
+
+    .expanded {
+        min-height: 100vh;
+        max-width: 100vw;
+        z-index: 9999;
+        scale: 1.4;
+    }
+
+    .expandDiv {
+        transition: top 1s ease-in-out, left 1s ease-in-out;
+        position: absolute;
+        top: 2%;
+        left: 1.5%;
+        transform: translate(-50%, 0);
+        z-index: 9999;
+    }
+
+    .expanded>.expandDiv {
+        position: absolute;
+        top: 15%;
+        left: 15.8%;
+        z-index: 9999;
+    }
+
+    .collapsed {
+        min-height: 0;
+        overflow: hidden;
     }
 
 }

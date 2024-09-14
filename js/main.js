@@ -40,14 +40,13 @@ document.querySelectorAll('.expandDiv').forEach(button => {
         const parentElement = this.parentElement;
         const isExpanded = parentElement.classList.toggle('expanded');
 
-        // Gestisci gli altri div
         document.querySelectorAll('.gig').forEach(div => {
             if (div !== parentElement) {
                 div.classList.toggle('collapsed', isExpanded);
             }
         });
 
-        document.documentElement.style.overflow = isExpanded ? 'hidden' : 'auto';
+        document.documentElement.style.overflowY = isExpanded ? 'hidden' : 'auto';
     });
 });
 
