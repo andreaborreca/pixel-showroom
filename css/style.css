@@ -25,12 +25,12 @@ body {
 
 #piano {
     background-color: #F1D302;
-    transition: min-height 0.5s ease-in-out, scale 1s ease-in-out;
+    transition: min-height 0.5s ease-in, scale 1s ease-in-out;
     z-index: 1;
 }
 
 #gioconda {
-    transition: min-height 0.5s ease-in-out, scale 1s ease-in-out;
+    transition: min-height 0.5s ease-in, scale 1s ease-in-out;
 }
 
 .expanded {
@@ -41,7 +41,7 @@ body {
 }
 
 .expandDiv {
-    transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+    transition: top 1s ease-in-out, left 1s ease-in-out;
     position: absolute;
     top: 2%;
     left: 2%;
